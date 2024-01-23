@@ -98,9 +98,9 @@ getInShape<-function(dat,myshape,colid=1,doplot=FALSE){
 }
 
 
-doOneFileS3<-function(nc,myshape,discardNA=TRUE, tofile=FALSE, colid=2,doplot=FALSE ){
+doOneFileS3<-function(nc,myshape,discardNA=TRUE, tofile=FALSE, colid=1,doplot=FALSE ){
    dat<-readS3(nc,discardNA=discardNA,tofile=tofile)
-   datin<-getInShape(dat,myshape,colid=coldid,doplot=doplot)
+   datin<-getInShape(dat,myshape,colid=colid,doplot=doplot)
    return(datin)
 }
 
